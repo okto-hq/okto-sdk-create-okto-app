@@ -17,9 +17,9 @@ function getRepoUrl(template) {
   if (template === 'Next JS') {
     return 'https://github.com/okto-hq/okto-sdk-react-nextjs-starter-repo.git';
   }
-  // if (template === 'React Native') {
-  //   return 'https://github.com/okto-hq/okto-sdk-reactnative-template-app';
-  // }
+  if (template === 'React Native') {
+    return 'https://github.com/okto-hq/okto-sdk-reactnative-template-app';
+  }
   throw new Error(`Unsupported template: ${template}`);
 }
 
@@ -31,7 +31,7 @@ async function main() {
       type: 'list',
       name: 'template',
       message: 'Choose a template:',
-      choices: ['React', 'Next JS'],
+      choices: ['React', 'Next JS', 'React Native'],
     },
     {
       type: 'input',
