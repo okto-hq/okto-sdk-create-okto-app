@@ -59,14 +59,14 @@ async function main() {
 
     // Install dependencies
     console.log(chalk.yellow('Installing dependencies...'));
-    execSync('npm install', { cwd: targetDir, stdio: 'inherit' });
+    execSync('yarn install', { cwd: targetDir, stdio: 'inherit' });
 
     console.log(chalk.green(`
 Successfully created ${projectName}!
 
 To get started:
   cd ${projectName}
-  npm start
+  yarn start
 `));
   } catch (error) {
     console.error(chalk.red('An error occurred:'), error);
